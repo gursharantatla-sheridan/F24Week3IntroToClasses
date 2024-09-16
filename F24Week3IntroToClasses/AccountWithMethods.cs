@@ -36,6 +36,9 @@ namespace F24Week3IntroToClasses
 
         public void Withdraw(double amount)
         {
+            if (amount < 0)
+                throw new Exception("Amount cannot exceed the balance");
+
             _balance -= amount;
         }
     }
